@@ -2,9 +2,10 @@
   command = "npm run build"
   publish = ".next"
 
-[[edge_functions]]
-  path = "/*"
-  function = "next"
-  
 [[plugins]]
   package = "@netlify/next-runtime"
+
+[[redirects]]
+  from = "/_next/*"
+  to = "/_next/:splat"
+  status = 200
