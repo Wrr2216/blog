@@ -2,11 +2,11 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res) {
-  res.render('landing', { title: 'Miller Cyber Technologies' });
+  res.render('landing', { title: "Miller's Dev Desk" });
 });
 
 router.get('/portfolio', function(req, res) {
-  res.render('portfolio', { title: 'Logan Miller Portfolio' });
+  res.render('portfolio', { title: "Miller's Dev Desk" });
 });
 
 
