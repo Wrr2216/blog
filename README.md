@@ -1,35 +1,26 @@
-# My Blog App
+This is a template I have created to produce quick websites on the NodeJS / Express framework. These are deployed rapidly and can sync easily with the git repos they are assigned to.
 
-This is a blog app built using Hashnode as the backend. It allows you to display all your blogs from Hashnode and view each blog in a separate slug page.
+The site can be fully customized with the config files, CSS, JS, and pages/views utilizing pug. 
 
-## Features
 
-- Display all blogs from Hashnode
-- View each blog in a separate slug page
+# Step 1
+Download these files to a directory on your development machine / host. 
 
-## Installation
+# Step 2 
 
-1. Clone the repository:
+run 'npm install' to install all dependencies / packages. 
 
-   ```bash
-   git clone https://github.com/ladparth/navigatedata.git
-   ```
+# Step 3
 
-2. Install the dependencies:
+Modify the following files at a minimum to adjust to your projects specifications.
 
-   ```bash
-   npm install
-   ```
+- ./config.js
+- ./start.cmd - Windows Based
+- ./start.sh - Unix Based
+- ./models/ These are your sequelize models
+- ./routes/ These are your routes to handle loading the pages
+- ./views/ These are your views to render the UI
 
-3. Configure Hashnode API
+# Step 4
 
-   - Add the following lines to your `.env.local` file in the root directory of your project:
-
-     ```bash
-     NEXT_PUBLIC_HASHNODE_GQL_ENDPOINT=https://gql.hashnode.com
-     NEXT_PUBLIC_HASHNODE_PUBLICATION_HOST=
-     ```
-
-## Usage
-
-To start the development server, run the following command:
+publish your site.

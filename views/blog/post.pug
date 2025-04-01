@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+  .container
+    .row
+      .col-md-3
+        nav#blog-sidebar
+          h4 Blog Posts
+          ul.post-list
+            each p in posts
+              li
+                a.button.post(href=`/blog/${p.slug}`)= p.title
+          a.button.back-home(href="/blog") ← Back to Home
+
+      .col-md-9
+        // --- Header Bar ---
+        .post-header.d-flex.align-items-center.gap-2.mb-4
+          img.rounded-circle(src=post.author.profilePicture, alt=post.author.name, style="width:40px;height:40px;")
+          span
+            strong= post.author.name
+            |  · #{new Date(post.publishedAt).toLocaleDateString()} · 3 min read
+
+        // --- Post Content ---
+        .blog-content !{post.content.html}

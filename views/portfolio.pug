@@ -1,0 +1,74 @@
+extends layout
+
+block content
+
+  .container
+
+    a.button.back-home(href="/") ← Back to Home
+    h1 Logan Miller
+    p.lead Firefighter | Paramedic | Technology Officer | Developer
+
+    hr
+
+    section#about
+      h2 About Me
+      p I am a seasoned Technical Professional with 6+ years of experience in IT operations and a recent graduate with a Bachelor of Science in Cybersecurity.
+      p I specialize in network administration, systems management, automation, and web development. I am currently a Firefighter Paramedic and Technology Officer managing web-based services and IT operations for a fire department.
+
+    hr
+
+    section#certifications
+        .cert-section
+            h2 Certifications
+            p.subtitle Industry Recognized Credentials
+
+            .cert-card
+                .cert-grid
+                    div(data-iframe-width="150" data-iframe-height="270" data-share-badge-id="c3a97e94-bd84-431d-9c42-9d6ed0071926" data-share-badge-host="https://www.credly.com")
+                    div(data-iframe-width="150" data-iframe-height="270" data-share-badge-id="e605d593-be21-4c4d-ac65-9b9bf26a5a5c" data-share-badge-host="https://www.credly.com")
+                    div(data-iframe-width="150" data-iframe-height="270" data-share-badge-id="d221b846-eff4-4afc-892c-939680cfafa6" data-share-badge-host="https://www.credly.com")
+                    div(data-iframe-width="150" data-iframe-height="270" data-share-badge-id="2553a31d-c4e8-445e-8850-97a40dcf0a90" data-share-badge-host="https://www.credly.com")
+                    div(data-iframe-width="150" data-iframe-height="270" data-share-badge-id="1f7dc1b9-0bd3-4bfe-952e-3507a750e680" data-share-badge-host="https://www.credly.com")
+                    div(data-iframe-width="150" data-iframe-height="270" data-share-badge-id="05ccb2cb-b08f-4f8d-af26-27c841990a05" data-share-badge-host="https://www.credly.com")
+                    div(data-iframe-width="150" data-iframe-height="270" data-share-badge-id="6c6f3f83-42a4-4b2d-8b2a-495791def22b" data-share-badge-host="https://www.credly.com")
+                    div(data-iframe-width="150" data-iframe-height="270" data-share-badge-id="7b497b35-2b6f-4ab4-b3e7-e0e28ba5da1b" data-share-badge-host="https://www.credly.com")
+                    div(data-iframe-width="150" data-iframe-height="270" data-share-badge-id="d8e6216a-9b05-442a-a9e5-9d0cf4e598c1" data-share-badge-host="https://www.credly.com")
+                    div(data-iframe-width="150" data-iframe-height="270" data-share-badge-id="66d62877-4524-4077-9812-d19ccf3cb453" data-share-badge-host="https://www.credly.com")
+                    div(data-iframe-width="150" data-iframe-height="270" data-share-badge-id="8afc13e5-f8d8-45e0-aaf8-835c47726594" data-share-badge-host="https://www.credly.com")
+                script(type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js")
+
+    hr
+
+    section#skills
+      h2 Skills
+      img(src="https://skillicons.dev/icons?i=js,html,css,php,cs,python,java,lua,arduino,css,discord,git,github,linux,mysql,powershell,raspberrypi,stackoverflow,visualstudio,vscode&perline=5", alt="Skill Icons")
+
+    hr
+
+    section#projects
+        h2 Projects
+        -
+            var projects = [
+            { title: 'Timesheet Management System', tech: 'NodeJS, ExpressJS, ReactJS, MySQL', desc: 'Employee timesheet tracking system with admin suite and reporting.' },
+            { title: 'Run Log Management System', tech: 'NodeJS, ExpressJS, ReactJS, MySQL', desc: 'Web-based EMS run log with frequent flyer detection and dark mode.' },
+            { title: 'Reservation System', tech: 'NodeJS, ExpressJS, ReactJS, MySQL', desc: 'Resource scheduling with approvals and user authentication.' },
+            { title: 'Fully Featured Home Lab Setup', tech: 'Proxmox, pfSense, Docker, Active Directory', desc: 'Virtualized infrastructure for testing and development.' },
+            { title: 'Narcotic & Supply Inventory System', tech: 'NodeJS, ExpressJS, ReactJS, MySQL', desc: 'Secure inventory management with audit trails and reporting.' }
+            ]
+        .project-grid
+            each project in projects
+                .project
+                    h3= project.title
+                    p.text-small= project.tech
+                    p= project.desc
+
+    hr
+
+    section#contact.text-center
+        h2 Contact
+        p Connect with me professionally
+
+        .centered-buttons
+            a.button(href='https://linkedin.com/in/logan-miller-18889b222', target='_blank') LinkedIn
+            a.button(href='https://github.com/Wrr2216', target='_blank') GitHub
+            a.button(href='/cdn-cgi/l/email-protection#0c60636b6d624c61656060697e6f756e697e2278696f64') Email
